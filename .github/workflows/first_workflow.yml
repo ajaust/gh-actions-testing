@@ -3,7 +3,11 @@ run-name: First workflow # Optional
 permissions: {}
 
 # Events triggering the workflow
-on: [push]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   greet:
