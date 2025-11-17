@@ -10,3 +10,15 @@ jobs:
     timeout-minutes: 5
     steps:
       - run: echo "Hello world"
+
+  run-code:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@6
+        with:
+          python-version: '3.14'
+
+      - run: python mycode.py
