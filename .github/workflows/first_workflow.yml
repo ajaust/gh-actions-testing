@@ -1,0 +1,11 @@
+name: My first GitHub workflow
+run-name: First workflow # Optional
+
+# Events triggering the workflow
+on: [push]
+
+jobs:
+  greet:
+    run-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world"
